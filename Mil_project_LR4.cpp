@@ -1,6 +1,12 @@
 #include <iostream>
 
-function<void()> EnterNumber();
+function<void()> EnterNumber(int& varLink, strting label); 
+
+int EnterX();
+
+int EnterY();
+
+int EnterZ();
 
 int DecimalSum();
 
@@ -13,9 +19,9 @@ struct MenuItem {
 
 int main() {
     map<int, MenuItem> menu = {
-        {1, {"", EnterNumber()}},
-        {2, {"", EnterNumber()}},
-        {3 {"", EnterNumber()}},
+        {1, {"", EnterX()}},
+        {2, {"", EnterY()}},
+        {3 {"", EnterZ()}},
         {4, {"", DecimalSum()}},
         {5, {"", IntegralSum()}}
     };
