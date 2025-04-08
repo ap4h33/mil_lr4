@@ -35,7 +35,9 @@ double enterZ(){};
 
 double sumOfDecimals(){};
 
-double sumOfFull(){};
+double sumOfFull(){
+    return int(x) + int(y) + int(z);
+}
 
 struct MenuItem {
     string title;
