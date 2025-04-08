@@ -29,7 +29,10 @@ void enterNumber (int& varLink, string label) {
 
 double enterX(){};
 
-double enterY(){};
+double enterY(){
+    double y = 0;
+    return enterNumber(y, "Введите у: ");
+}
 
 double enterZ(){};
 
