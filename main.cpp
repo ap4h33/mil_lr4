@@ -37,7 +37,10 @@ double enterY(){
     return enterNumber(y, "Введите у: ");
 }
 
-double enterZ(){};
+double enterZ(){
+    double z = 0;
+    return enterNumber(z, "Введите z: ");
+}
 
 double sumOfDecimals(){};
 
