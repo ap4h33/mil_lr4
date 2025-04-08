@@ -27,7 +27,10 @@ void enterNumber (int& varLink, string label) {
     varLink = stoi(str_input);
 }
 
-double enterX(){};
+double enterX(){
+    double x = 0;
+    return enterNumber(x, "Введите х: s");
+};
 
 double enterY(){};
 
