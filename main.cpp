@@ -16,37 +16,41 @@ bool UserInput(string input) {
     return true;
 }
 
-void enterNumber (int& varLink, string label) {
+template <typename T>
+void enterNumber (T& varLink, string label) {
     string str_input;
-    cout << lanel << " = ";
-    geline(cin, str_input);
+    cout << label;
+    getline(cin, str_input);
     while (!UserInput(str_input)) {
         cout << label << " = ";
-        geline(cinm str_input);
+        getline(cin, str_input);
     }
     varLink = stoi(str_input);
 }
 
 double enterX(){
     double x = 0;
-    return enterNumber(x, "Введите х: s");
+    enterNumber(x, "Введите х: ");
+    return x;
 };
 
 double enterY(){
     double y = 0;
-    return enterNumber(y, "Введите у: ");
+    enterNumber(y, "Введите у: ");
+    return y;
 }
 
 double enterZ(){
     double z = 0;
-    return enterNumber(z, "Введите z: ");
+    enterNumber(z, "Введите z: ");
+    return z;
 }
 
 double sumOfDecimals(double x, double y, double z){
     return (x - int(x)) + (y - int(y)) + (z - int(z));
 }
 
-double sumOfFull(){
+double sumOfIntegers(double x, double y, double z){
     return int(x) + int(y) + int(z);
 }
 
@@ -57,7 +61,11 @@ struct MenuItem {
 
 int main() {
     map<int, MenuItem> menu = {
-        {1, {}},
+        {1, {"Enter x", []() { enterX(); }}},
+        {2, {"Enter y", []() { enterY(); }}},
+        {3, {"Enter z", []() { enterZ(); }}},
+        {4, {"Calculate the sum of the decimals", []() { sumOfDecimals(enterX(), enterY(), enterZ()); }}},
+        {5, {"Calculate the sum of integers", []() { sumOfIntegers(enterX(), enterY(), enterZ()); }}}
     };
 
     int choice = 0;
