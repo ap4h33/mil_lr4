@@ -32,7 +32,10 @@ double enterX(){
     return enterNumber(x, "Введите х: s");
 };
 
-double enterY(){};
+double enterY(){
+    double y = 0;
+    return enterNumber(y, "Введите у: ");
+}
 
 double enterZ(){};
 
