@@ -46,7 +46,9 @@ double sumOfDecimals(double x, double y, double z){
     return (x - int(x)) + (y - int(y)) + (z - int(z));
 }
 
-double sumOfFull(){};
+double sumOfFull(){
+    return int(x) + int(y) + int(z);
+}
 
 struct MenuItem {
     string title;
