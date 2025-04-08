@@ -33,7 +33,9 @@ double enterY(){};
 
 double enterZ(){};
 
-double sumOfDecimals(){};
+double sumOfDecimals(double x, double y, double z){
+    return (x - int(x)) + (y - int(y)) + (z - int(z));
+}
 
 double sumOfFull(){};
 
